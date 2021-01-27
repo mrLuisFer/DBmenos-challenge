@@ -1,0 +1,10 @@
+.Link {
+  text-decoration: none;
+  color: var(--principal);
+  font-weight: 700;
+}
+
+.Link:hover {
+  text-decoration: underline;
+  color: var(--secundario-2);
+}

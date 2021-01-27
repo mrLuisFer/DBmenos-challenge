@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import "./styles/normalize.css";
+@import "./styles/loader.css";
+/* Here was the global styles */
+:root {
+  font-size: 16px;
+  /* Variables */
+  --principal: #364f6b;
+  --secundario: #00adb5;
+  --secundario-2: #0d7377;
+  --terciario: #b9d7ea;
+  --terciario-2: #48466d;
+  --title-color: #222831;
+  --text-color: #393e46;
+  --white: #ffffff;
+  --shadow: 1px 4px 20px 0 rgba(19, 24, 90, 0.17);
+  --shadow-hover: 2px 4.5px 17px rgba(19, 24, 90, 0.47);
+  --radius: 10px;
+  --transition: 0.2s ease-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background: var(--terciario); */
+  background: rgb(0, 70, 77);
+  color: var(--text-color);
+}
+
+@media (min-width: 800px) {
+  body {
+    padding: 0 3%;
+  }
+}
+
+/* Globals */
+@import "./styles/custom_scroll.css";
+@import "./components/Header/Header.css";
+
+.glass-bg {
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }
