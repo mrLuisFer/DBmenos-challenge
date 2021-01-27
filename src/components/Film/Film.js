@@ -14,7 +14,7 @@ export default function Film({ title, director, rt_score, description, id }) {
   let history = useHistory()
 
   const handleOpenFilm = () => {
-    history.push(`/article/${id}`)
+    history.push(`/film/${id}`)
   }
 
   return (

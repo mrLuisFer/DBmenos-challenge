@@ -35,6 +35,7 @@ const FilmsErrorButton = styled(GlobalButton)`
   background-color: var(--principal);
   box-shadow: var(--shadow);
   color: var(--white);
+  cursor: pointer;
 
   @media (min-width: ${ipad}) {
     margin-left: auto;

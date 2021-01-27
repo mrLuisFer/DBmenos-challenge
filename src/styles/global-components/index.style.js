@@ -12,6 +12,7 @@ const GlobalButton = styled.button`
   outline: none;
   font-size: 1rem;
   border-radius: var(--radius);
+  cursor: pointer;
 `
 
 export { GlobalAnchor, GlobalButton }

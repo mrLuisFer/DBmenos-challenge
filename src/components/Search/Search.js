@@ -24,7 +24,7 @@ export default function Search({ setSearchTitle, handleSort }) {
       </SearchContainerInput>
 
       <SearchFlex className="glass-bg">
-        <SearchText fontSize=".8rem" className="glass-bg" margin="0 1rem 0 0">
+        <SearchText fontSize=".8rem" margin="0 1rem 0 0">
           Sort by name:
         </SearchText>
         <SarchSortIcon

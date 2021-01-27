@@ -1,31 +1,22 @@
-import React from "react"
-import { AboutTextContainer } from "./AboutText.style"
+import React, { useState } from "react"
+import { AboutTextContainer, AboutTextBtn } from "./AboutText.style"
+import AboutTextEs from "./AboutText-lang/AboutTextEs.js"
+import AboutTextEn from "./AboutText-lang/AboutTextEn"
 
 export default function AboutText() {
+  const [changeLanguage, setChangeLanguage] = useState(true)
+
+  const handleChangeLang = () => {
+    setChangeLanguage(!changeLanguage)
+  }
+
   return (
     <AboutTextContainer>
-      <p>
-        Este es un desafio para la participacion para demostrar las capacidades
-        de los aspirantes y cubrir una vacante en{" "}
-        <a href="https://dbmenos.com/" target="_blank" rel="noreferrer">
-          DBMenos.com
-        </a>
-      </p>
-
-      <p>
-        Bueno esta es mi version de este pequeño desafio, espero y cumpla con
-        sus expectativas
-      </p>
-      <p>
-        A mi me encanta programar aunque no sea muy bueno en diseño, pero
-        cualquier necesidad puedo cumplirla, porque me gusta mucho aprender
-        cosas nuevas y experimentar para crear cosas geniales ;D
-      </p>
-      <p>
-        Y si llego a obtener esta oportunidad de trabajo sera una gran
-        felicidad, y espero trabajar pronto y colaborar con mas programadores y
-        trabajar juntos {":)"}
-      </p>
+      {changeLanguage ? <AboutTextEn /> : <AboutTextEs />}
+      <AboutTextBtn onClick={handleChangeLang}>
+        <i className="fas fa-language"></i>
+        {changeLanguage ? "Cambiar Lenguaje" : "Change Language"}
+      </AboutTextBtn>
     </AboutTextContainer>
   )
 }

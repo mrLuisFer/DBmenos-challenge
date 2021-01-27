@@ -61,6 +61,11 @@ const SearchText = styled.span`
 const SarchSortIcon = styled.i`
   padding: 0.6rem 0.85rem;
   cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    box-shadow: var(--shadow-hover);
+  }
 `
 
 const SearchFlex = styled.div`
